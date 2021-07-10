@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<script src='https://meet.jit.si/external_api.js'></script>
 <title>www.jitsimprov.de</title>
 <style> 
 input, textarea {background:#F7E3FD}
@@ -13,13 +14,30 @@ textarea{height:180px; width: 102px}
 Ines
 EDgAr
 elli</textarea>
-<input type="button" value="los!" onclick="greet()"> 
+<input type="button" value="los!" onclick="ausgabe()"> 
 <p id="ausgabenamen"></p>
+<div id="meet"></div>
 <script>
+const domain = 'meet02.verstehbahnhof.de';
+const options = {
+	roomName: 'jhhh2021betahauswscat',
+	width: 700,
+	height: 700,
+	parentNode: document.querySelector('#meet'),
+	configOverwrite: { startWithAudioMuted: true },
+	
+};
+const api = new JitsiMeetExternalAPI(domain, options);
+
+
+
 berufe=["Bäcker*in", "Briefmarkenhändler*in", "Zahnärzt*in", "Florist*in", "Kellner*in"]
 objekte=["Tisch", "Gummiente", "Headset", "Franzbrötchen", "Mate", "Alpakas", "Schloss", "Zahn", "Blatt", "Besen", "Staubsauger", "Feuerzeug", "Baby", "Kerze"]
-function greet (){
-	namelist= document.querySelector("#namen").value.split("\n")
+function ausgabe (){
+	participants=api.getParticipantsInfo()
+	names=participants.map(o=>o.displayName)
+	console.log(names)
+	namelist= names
 	do{
 		namenumber=getRandomInt(namelist.length)
 		name=namelist[namenumber]
