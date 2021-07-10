@@ -16,6 +16,8 @@ elli</textarea>
 <input type="button" value="los!" onclick="greet()"> 
 <p id="ausgabenamen"></p>
 <script>
+berufe=["Bäcker*in", "Briefmarkenhändler*in", "Zahnärzt*in", "Florist*in", "Kellner*in"]
+objekte=["Tisch", "Gummiente", "Headset", "Franzbrötchen", "Mate", "Alpakas", "Schloss", "Zahn", "Blatt", "Besen", "Staubsauger", "Feuerzeug", "Baby", "Kerze"]
 function greet (){
 	namelist= document.querySelector("#namen").value.split("\n")
 	console.log(namelist)
@@ -23,7 +25,9 @@ function greet (){
 		namenumber=getRandomInt(namelist.length)
 		namenumber2=getRandomInt(namelist.length)
 	}while (namenumber===namenumber2)
-	document.querySelector("#ausgabenamen").innerHTML=`Wird gespielt von: ${ namelist[namenumber]} und ${namelist[namenumber2]}` 
+	berufnummer=getRandomInt(berufe.length)
+	objektnummer=getRandomInt(objekte.length)
+	document.querySelector("#ausgabenamen").innerHTML=`${namelist[namenumber]} (Beruf: ${berufe[berufnummer]}) und ${namelist[namenumber2]} (Gegenstand: ${objekte[objektnummer]})`
 }
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
