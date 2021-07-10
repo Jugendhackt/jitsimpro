@@ -10,10 +10,6 @@ textarea{height:180px; width: 102px}
 </head>
 <body>
 <h1>Jitsimpro</h1>
-<textarea id="namen">blinry
-Ines
-EDgAr
-elli</textarea>
 <img src="Los-Button.png" onclick="ausgabe()"> 
 <p id="ausgabenamen"></p>
 <div id="meet"></div>
@@ -39,6 +35,10 @@ function ausgabe (){
 	names=participants.map(o=>o.displayName)
 	console.log(names)
 	namelist= names
+	if(namelist.length < 2){
+		alert ("Mindestanzahl Personen: 2")
+		return
+	}
 	do{
 		namenumber=getRandomInt(namelist.length)
 		name=namelist[namenumber]
