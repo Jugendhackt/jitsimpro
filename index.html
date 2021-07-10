@@ -1,9 +1,12 @@
 <style> 
 span {font-weight:bold}
-input, textarea {background:#FF32a3}
+input, textarea {background:#F7E3FD}
 </style>
 <h1> Jitsimpro </h1>
-<textarea id="namen"> </textarea>
+<textarea id="namen">blinry
+ines
+edgar
+elli</textarea>
 <input type="button" value="los!" onclick="greet()"> 
 <span style="text-decoration:underline"> kursiv </span>
 <span style="font-style:italic"> blinry </span>
@@ -13,7 +16,14 @@ input, textarea {background:#FF32a3}
 </ul>
 <script>
 function greet (){
-	text= document.querySelector("#namen").value
-	alert("Hallo "+text)
+	namelist= document.querySelector("#namen").value.split("\n")
+	console.log(namelist)
+	namenumber=getRandomInt(namelist.length)
+	console.log(namenumber)
+	console.log(namelist[namenumber])
 }
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 </script>
