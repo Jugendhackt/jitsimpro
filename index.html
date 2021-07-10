@@ -1,17 +1,17 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>www.jitsimprov.de</title>
 <style> 
-span {font-weight:bold}
 input, textarea {background:#F7E3FD}
 textarea{height:180px; width: 102px}
 </style>
 </head>
 <body>
-<h1> Jitsimpro </h1>
+<h1>Jitsimpro</h1>
 <textarea id="namen">blinry
-ines
-edgar
+Ines
+EDgAr
 elli</textarea>
 <input type="button" value="los!" onclick="greet()"> 
 <p id="ausgabenamen"></p>
@@ -23,10 +23,6 @@ function greet (){
 		namenumber=getRandomInt(namelist.length)
 		namenumber2=getRandomInt(namelist.length)
 	}while (namenumber===namenumber2)
-	console.log(namenumber)
-	console.log(namenumber2)
-	console.log(namelist[namenumber])
-	console.log(namelist[namenumber2])
 	document.querySelector("#ausgabenamen").innerHTML=`Wird gespielt von: ${ namelist[namenumber]} und ${namelist[namenumber2]}` 
 }
 function getRandomInt(max) {
