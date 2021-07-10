@@ -4,6 +4,7 @@
 <style> 
 span {font-weight:bold}
 input, textarea {background:#F7E3FD}
+textarea{height:180px; width: 102px}
 </style>
 </head>
 <body>
@@ -13,19 +14,20 @@ ines
 edgar
 elli</textarea>
 <input type="button" value="los!" onclick="greet()"> 
-<span style="text-decoration:underline"> kursiv </span>
-<span style="font-style:italic"> blinry </span>
-<ul> 
-<li> <input> </li>
-<li> zwei </li>
-</ul>
+<p id="ausgabenamen"></p>
 <script>
 function greet (){
 	namelist= document.querySelector("#namen").value.split("\n")
 	console.log(namelist)
-	namenumber=getRandomInt(namelist.length)
+	do{
+		namenumber=getRandomInt(namelist.length)
+		namenumber2=getRandomInt(namelist.length)
+	}while (namenumber===namenumber2)
 	console.log(namenumber)
+	console.log(namenumber2)
 	console.log(namelist[namenumber])
+	console.log(namelist[namenumber2])
+	document.querySelector("#ausgabenamen").innerHTML=`Wird gespielt von: ${ namelist[namenumber]} und ${namelist[namenumber2]}` 
 }
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
