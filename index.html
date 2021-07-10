@@ -10,21 +10,29 @@ textarea{height:180px; width: 102px}
 </head>
 <body>
 <h1>Jitsimpro</h1>
+<input type="text" placeholer="Raumname" id="roomname">
+<input type="button" value="Connect!" onclick="connect()">
 <img src="Los-Button.png" onclick="ausgabe()"> 
 <p id="ausgabenamen"></p>
 <div id="meet"></div>
 <script>
-const domain = 'meet.jit.si';
-//const domain = 'meet02.verstehbahnhof.de';
-const options = {
-	roomName: 'jhhh2021betahauswscat',
-	width: 700,
-	height: 700,
-	parentNode: document.querySelector('#meet'),
-	configOverwrite: { startWithAudioMuted: true },
+
+function connect (){
+	roomname=document.querySelector('#roomname').value
+	if(roomname==="") {roomname= "jhhh2021betahauswscat"}
+	console.log("blinry", roomname)
+	const domain = 'meet.jit.si';
+	//const domain = 'meet02.verstehbahnhof.de';
+	const options = {
+		roomName: roomname,
+		width: 700,
+		height: 700,
+		parentNode: document.querySelector('#meet'),
+		configOverwrite: { startWithAudioMuted: true },
 	
-};
-const api = new JitsiMeetExternalAPI(domain, options);
+	};
+	api = new JitsiMeetExternalAPI(domain, options);
+}
 
 
 
