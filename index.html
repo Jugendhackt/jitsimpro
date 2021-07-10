@@ -18,7 +18,8 @@ elli</textarea>
 <p id="ausgabenamen"></p>
 <div id="meet"></div>
 <script>
-const domain = 'meet02.verstehbahnhof.de';
+const domain = 'meet.jit.si';
+//const domain = 'meet02.verstehbahnhof.de';
 const options = {
 	roomName: 'jhhh2021betahauswscat',
 	width: 700,
@@ -48,7 +49,11 @@ function ausgabe (){
 	beruf=berufe[berufnummer]
 	objektnummer=getRandomInt(objekte.length)
 	objekt=objekte[objektnummer]
-	document.querySelector("#ausgabenamen").innerHTML=`${name} (Beruf: ${beruf}) und ${name2} (Objekt: ${objekt})`
+	message=`${name} (Beruf: ${beruf}) und ${name2} (Objekt: ${objekt})` 
+	document.querySelector("#ausgabenamen").innerHTML=message
+	api.executeCommand('sendChatMessage',
+    		message 
+	);
 }
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
