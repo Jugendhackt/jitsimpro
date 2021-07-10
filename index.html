@@ -20,14 +20,17 @@ berufe=["Bäcker*in", "Briefmarkenhändler*in", "Zahnärzt*in", "Florist*in", "K
 objekte=["Tisch", "Gummiente", "Headset", "Franzbrötchen", "Mate", "Alpakas", "Schloss", "Zahn", "Blatt", "Besen", "Staubsauger", "Feuerzeug", "Baby", "Kerze"]
 function greet (){
 	namelist= document.querySelector("#namen").value.split("\n")
-	console.log(namelist)
 	do{
 		namenumber=getRandomInt(namelist.length)
+		name=namelist[namenumber]
 		namenumber2=getRandomInt(namelist.length)
+		name2=namelist[namenumber2]
 	}while (namenumber===namenumber2)
 	berufnummer=getRandomInt(berufe.length)
+	beruf=berufe[berufnummer]
 	objektnummer=getRandomInt(objekte.length)
-	document.querySelector("#ausgabenamen").innerHTML=`${namelist[namenumber]} (Beruf: ${berufe[berufnummer]}) und ${namelist[namenumber2]} (Gegenstand: ${objekte[objektnummer]})`
+	objekt=objekte[objektnummer]
+	document.querySelector("#ausgabenamen").innerHTML=`${name} (Beruf: ${beruf}) und ${name2} (Objekt: ${objekt})`
 }
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
