@@ -3,11 +3,17 @@ span {font-weight:bold}
 input, textarea {background:#FF32a3}
 </style>
 <h1> Jitsimpro </h1>
-<textarea> </textarea>
-<input type="button" value="los!"> 
+<textarea id="namen"> </textarea>
+<input type="button" value="los!" onclick="greet()"> 
 <span style="text-decoration:underline"> kursiv </span>
 <span style="font-style:italic"> blinry </span>
 <ul> 
 <li> <input> </li>
 <li> zwei </li>
 </ul>
+<script>
+function greet (){
+	text= document.querySelector("#namen").value
+	alert("Hallo "+text)
+}
+</script>
