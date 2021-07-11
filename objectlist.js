@@ -48,4 +48,4 @@ objekte=["2 Jeans", "1 Anzug",
 "1 Eimer" ,
 "1 Mütze" ,
 "1 Fahrrad", 
-"Tisch", "Gummiente", "Headset", "Franzbrötchen", "Mate", "Alpakas", "Schloss", "Zahn", "Blatt", "Besen", "Staubsauger", "Feuerzeug", "Baby", "Kerze"]
+"Tisch", "Gummiente", "Headset", "Franzbrötchen", "Mate", "Alpakas", "Schloss", "Zahn", "Blatt", "Besen", "Staubsauger", "Feuerzeug", "Baby", "Kerze", "Zauberwürfel", "Mate-Flasche", "Taschenrechner", "Nasenspray", "Schüssel", "Armband", "Handcreme", "Haargummi", "Mäppchen", "Desinfektionsmittel", "Tabletten", "Mülltonne"]
