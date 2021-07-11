@@ -15,7 +15,7 @@ function connect (){
 	};
 	api = new JitsiMeetExternalAPI(domain, options);
 	document.querySelector('#hidebutton').style.display="none"
-	document.querySelector('#Los-BUTTON').style.display="block"
+	document.querySelector('#Los-BUTTON').style.display="inline"
 }
 
 function ausgabe (){

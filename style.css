@@ -1,2 +1,6 @@
 input, textarea {background:#F7E3FD}
 textarea{height:180px; width: 102px}
+body{
+text-align:center;
+font-family:"Arial", sans-serif;
+}
