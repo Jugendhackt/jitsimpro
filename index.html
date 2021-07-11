@@ -10,9 +10,11 @@ textarea{height:180px; width: 102px}
 </head>
 <body>
 <h1>Jitsimpro</h1>
+<div id="hidebutton">
 <input type="text" placeholer="Raumname" id="roomname">
-<input type="button" value="Connect!" onclick="connect()">
-<img src="Los-Button.png" onclick="ausgabe()"> 
+<img src="Connect-Button.png" onclick="connect()">
+</div>
+<img src="Los-Button.png" onclick="ausgabe()" id="Los-BUTTON" style="display:none"> 
 <p id="ausgabenamen"></p>
 <div id="meet"></div>
 <script>
@@ -32,6 +34,8 @@ function connect (){
 	
 	};
 	api = new JitsiMeetExternalAPI(domain, options);
+	document.querySelector('#hidebutton').style.display="none"
+	document.querySelector('#Los-BUTTON').style.display="block"
 }
 
 
