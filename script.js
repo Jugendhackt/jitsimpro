@@ -2,7 +2,6 @@
 function connect (){
 	roomname=document.querySelector('#roomname').value
 	if(roomname==="") {roomname= "jhhh2021betahauswscat"}
-	console.log("blinry", roomname)
 	const domain = 'meet.jit.si';
 	//const domain = 'meet02.verstehbahnhof.de';
 	const options = {
@@ -16,7 +15,7 @@ function connect (){
 	api = new JitsiMeetExternalAPI(domain, options);
 	document.querySelector('#hidebutton').style.display="none"
 	document.querySelector('#Los-BUTTON').style.display="inline"
-	document.body.style.background="#f7e7f3"
+	document.body.classList.add("activemode")
 }
 
 function ausgabe (){

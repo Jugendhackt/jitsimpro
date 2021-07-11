@@ -5,3 +5,15 @@ background:#dee0f1;
 text-align:center;
 font-family:"Arial", sans-serif;
 }
+@media (prefers-color-scheme: dark){	
+	body{
+		background:#001f52;
+		color:whitesmoke;
+	}
+}
+.activemode{background:#f7e7f3}
+@media (prefers-color-scheme: dark){
+	.activemode{
+		background: #560040;
+	}
+}
