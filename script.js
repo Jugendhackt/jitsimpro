@@ -16,6 +16,7 @@ function connect (){
 	api = new JitsiMeetExternalAPI(domain, options);
 	document.querySelector('#hidebutton').style.display="none"
 	document.querySelector('#Los-BUTTON').style.display="inline"
+	document.body.style.background="#f7e7f3"
 }
 
 function ausgabe (){
