@@ -17,6 +17,8 @@ textarea{height:180px; width: 102px}
 <img src="Los-Button.png" onclick="ausgabe()" id="Los-BUTTON" style="display:none"> 
 <p id="ausgabenamen"></p>
 <div id="meet"></div>
+<script src="joblist.js"></script>
+<script src="objectlist.js"></script>
 <script>
 
 function connect (){
@@ -38,10 +40,6 @@ function connect (){
 	document.querySelector('#Los-BUTTON').style.display="block"
 }
 
-
-
-berufe=["Bäcker*in", "Briefmarkenhändler*in", "Zahnärzt*in", "Florist*in", "Kellner*in"]
-objekte=["Tisch", "Gummiente", "Headset", "Franzbrötchen", "Mate", "Alpakas", "Schloss", "Zahn", "Blatt", "Besen", "Staubsauger", "Feuerzeug", "Baby", "Kerze"]
 function ausgabe (){
 	participants=api.getParticipantsInfo()
 	names=participants.map(o=>o.displayName)
